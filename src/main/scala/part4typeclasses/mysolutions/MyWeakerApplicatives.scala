@@ -1,4 +1,4 @@
-package part4typeclasses
+package part4typeclasses.mysolutions
 
 import cats.{Functor, Semigroupal}
 

@@ -1,4 +1,4 @@
-package part2abstractMath
+package part2abstractMath.mysolutions
 
 import scala.annotation.tailrec
 
@@ -88,7 +88,6 @@ object MyCustomMonads {
 
   def main(args: Array[String]): Unit = {
     val anumber1: Identity[Int] = 300
-      import IdentityMonad._
     val result =   IdentityMonad.flatMap(anumber1)(x => x * 300)
     println(result)
 

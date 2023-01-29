@@ -1,12 +1,11 @@
-package part4typeclasses
-
+package part4typeclasses.mysolutions
 
 object MyApplicatives {
 
   // Applicatives = Functors + the pure method
 
-  import cats.instances.list._
   import cats.Applicative
+  import cats.instances.list._
   val listApplicative = Applicative[List]
   val aList = listApplicative.pure(987)
   val aMappedList = listApplicative.map(aList)(element => element * 2)

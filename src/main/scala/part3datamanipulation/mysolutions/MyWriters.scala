@@ -1,8 +1,8 @@
-package part3datamanipulation
+package part3datamanipulation.mysolutions
 
 import java.util.concurrent.Executors
 import scala.annotation.tailrec
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.ExecutionContext
 
 object MyWriters {
 

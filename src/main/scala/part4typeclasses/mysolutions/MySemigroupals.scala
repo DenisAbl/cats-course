@@ -1,4 +1,4 @@
-package part4typeclasses
+package part4typeclasses.mysolutions
 
 import java.util.concurrent.Executors
 import scala.concurrent.{ExecutionContext, Future}
@@ -66,7 +66,6 @@ object MySemigroupals {
   def main(args: Array[String]): Unit = {
     println(invalidsCombination)
     println(eitherCombination)
-    import cats.Monad
     import cats.instances.option._ // implicit Monad[Option]
     println(productWithMonads(Option("1"), Option(2)))
     println(zipListSemigroupal.product(List(1, 2), List("a", "b")))

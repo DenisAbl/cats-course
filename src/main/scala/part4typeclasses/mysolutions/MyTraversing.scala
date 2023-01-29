@@ -1,9 +1,8 @@
-package part4typeclasses
+package part4typeclasses.mysolutions
+
+import cats.{Applicative, Monad}
 
 import java.util.concurrent.Executors
-import cats.{Applicative, Foldable, Functor, Monad}
-
-import scala.::
 import scala.concurrent.{ExecutionContext, Future}
 
 object MyTraversing {
@@ -22,8 +21,8 @@ object MyTraversing {
     } yield accBandwidths :+ band
   }
 
-  import cats.syntax.applicative._ //for pure
-  import cats.syntax.flatMap._ //for flatMap
+  import cats.syntax.applicative._
+  import cats.syntax.flatMap._
   import cats.syntax.functor._ //for map
   def listTraverse[A, B, F[_]: Monad](list: List[A])(func: A => F[B]): F[List[B]] = {
     list.foldRight(List.empty[B].pure[F]){ (elem, acc) =>

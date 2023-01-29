@@ -1,6 +1,4 @@
-package part2abstractMath
-
-import part2abstractMath.UsingMonads.{AggressiveHttpService, errorOrResponse}
+package part2abstractMath.mysolutions
 
 import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
@@ -9,7 +7,6 @@ object MyUsingMonads {
 
   import cats.Monad
   import cats.instances.list._
-  import cats.instances.option._
   val monadList = Monad[List] // fetch the implicit Monad[List]
   val aSimpleList = monadList.pure(2) // List(2)
   val anExtendedList = monadList.flatMap(aSimpleList)(x => List(x, x + 1))

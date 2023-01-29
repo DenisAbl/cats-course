@@ -1,4 +1,4 @@
-package part2abstractMath
+package part2abstractMath.mysolutions
 
 import java.util.concurrent.Executors
 import scala.concurrent.{ExecutionContext, Future}
@@ -75,7 +75,6 @@ object MyMonadTransformers {
 
     // option transformer
     import cats.data.OptionT
-    import cats.instances.future._
     import cats.instances.list._
 
     val listOfNumberOptions: OptionT[List, Int] = OptionT(List(Option(1), Option(2), None))

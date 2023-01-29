@@ -1,11 +1,10 @@
-package part4typeclasses
+package part4typeclasses.mysolutions
 
 import cats.data.Validated
 import cats.{Applicative, ApplicativeError, Monad, MonadError}
 
 import java.util.concurrent.Executors
-import scala.concurrent.{ExecutionContext, Future}
-import scala.util.Try
+import scala.concurrent.ExecutionContext
 
 object MyHandlingErrors {
 
@@ -37,7 +36,7 @@ object MyHandlingErrors {
   val applErrorVal = ApplicativeError[ErrorsOr, List[String]]
 
   //extension methods
-  import cats.syntax.applicative._ // pure
+  import cats.syntax.applicative._
   import cats.syntax.applicativeError._ // raiseError, handle
 
   val extendedSuccess: ErrorsOr[Int] = 42.pure[ErrorsOr] //requires implicit ApplicativeError[ErrorsOr, List[String]]

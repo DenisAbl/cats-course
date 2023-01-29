@@ -1,4 +1,4 @@
-package part3datamanipulation
+package part3datamanipulation.mysolutions
 
 object MyReaders {
 
